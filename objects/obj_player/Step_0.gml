@@ -1,0 +1,4 @@
+
+
+movimentacao()
+atirando()
