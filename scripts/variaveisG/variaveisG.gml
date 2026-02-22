@@ -1,0 +1,1 @@
+global.plasma = 0

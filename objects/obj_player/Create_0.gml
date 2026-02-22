@@ -4,7 +4,7 @@ velh			 = 0
 velv			 = 0	
 vel_tiro		 = 30
 espera_tiro= 0
-demora_tiro= room_speed * 0.2
+demora_tiro= room_speed * 0.1
 
 movimentacao = function()
 {
@@ -42,11 +42,11 @@ atirando = function()
 	
 	var _fire		=	mouse_check_button(mb_left)
 	if (espera_tiro <= 0)
-	{
+	{	sprite_index = spr_player
 	if (_fire)
 			{
-	
-				var _tiro =		instance_create_layer(x, y, "balas", obj_tiro)
+				sprite_index = spr_player_atirando
+				var _tiro =		instance_create_layer(x, y, "cursor", obj_tiro)
 				_tiro.speed		=		vel_tiro
 				_tiro.direction	=		_dir
 				espera_tiro = demora_tiro
